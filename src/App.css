@@ -1,0 +1,127 @@
+/* Full-page stunning background image */
+body, #root {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+
+  background: url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Add a blurred/dark overlay for contrast */
+.app-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(18,28,40,0.60);
+  z-index: -1;
+  pointer-events: none;
+  /* Optional: subtle blur for extra glassy effect */
+  /* backdrop-filter: blur(2px); */
+}
+
+/* Form card - glassy, centered, shadowed */
+.form-container {
+  max-width: 540px;
+  margin: 50px auto;
+  padding: 38px 34px 54px 34px;
+  background: rgba(255,255,255,0.96);
+  border-radius: 20px;
+  box-shadow: 0 12px 36px 0 rgba(27,48,88,0.22), 0 2px 8px rgba(0,0,0,0.09);
+  z-index: 2;
+}
+
+@media (max-width:700px) {
+  .form-container {
+    margin: 24px auto;
+    padding: 16px 5vw;
+  }
+}
+
+/* Typography & controls */
+.MuiTypography-h5 {
+  margin-bottom: 22px;
+  color: #224;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.MuiTextField-root {
+  margin-bottom: 20px;
+}
+input, textarea {
+  color: #19273d !important;
+}
+
+/* Buttons */
+.MuiButton-root {
+  margin-top: 16px;
+  border-radius: 7px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  box-shadow: 0 2px 6px rgba(40,62,104,0.08);
+  transition: background 0.18s, color 0.22s;
+}
+.MuiButton-containedPrimary {
+  background: linear-gradient(90deg, #1976d2 60%, #43cea2 100%);
+  color: #fff;
+}
+.MuiButton-containedPrimary:hover {
+  background: linear-gradient(90deg, #1565c0 40%, #1976d2 100%);
+}
+.MuiButton-outlinedPrimary {
+  border: 2px solid #1976d2;
+  color: #1976d2;
+}
+
+/* Field editor layout */
+.field-editor-container {
+  margin-bottom: 15px;
+  border: 1px solid #e2e6ea;
+  border-radius: 9px;
+  background: rgba(245,245,255,0.92);
+  box-shadow: 0 2px 7px rgba(27,48,88,0.09);
+  padding: 18px 12px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+@media (max-width:540px) {
+  .field-editor-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 7px;
+  }
+}
+
+/* MyForms entries */
+.saved-form-card {
+  margin-bottom: 17px;
+  border: 1px solid #e7eaf3;
+  border-radius: 10px;
+  background: #f4f8fb;
+  box-shadow: 0 1.5px 6px rgba(34,52,104,0.06);
+  padding: 14px 18px 13px 18px;
+}
+
+/* AppBar + Toolbar (glass effect) */
+.MuiAppBar-root {
+  background: rgba(255,255,255,0.46) !important;
+  box-shadow: 0 2px 24px 0 rgba(32,44,87,0.14);
+  backdrop-filter: blur(7px);
+}
+.MuiToolbar-root {
+  min-height: 65px;
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+.MuiButton-text {
+  color: #1976d2 !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.MuiCheckbox-colorPrimary.Mui-checked {
+  color: #1976d2 !important;
+}
