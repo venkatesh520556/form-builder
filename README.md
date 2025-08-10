@@ -1,3 +1,9 @@
+Form Builder Application
+
+A modern, responsive form builder web app that allows users to intuitively create, edit, and manage custom forms. Featuring an animated background, glassmorphism card styling, and an elegant UI, this project is built with React and Material UI for a seamless user experience. Easily add various field types, preview live changes, and organize your forms efficiently ideal for surveys, registrations, feedback, and more.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
